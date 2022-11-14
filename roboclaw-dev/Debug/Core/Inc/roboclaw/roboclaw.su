@@ -10,9 +10,9 @@
 ../Core/Inc/roboclaw/roboclaw.c:197:17:Read2	32	static
 ../Core/Inc/roboclaw/roboclaw.c:245:16:Read1	32	static
 ../Core/Inc/roboclaw/roboclaw.c:289:19:roboclaw_begin	24	static
-../Core/Inc/roboclaw/roboclaw.c:300:19:roboclaw_ForwardM1	16	static
-../Core/Inc/roboclaw/roboclaw.c:304:19:roboclaw_ForwardM2	16	static
-../Core/Inc/roboclaw/roboclaw.c:308:19:roboclaw_BackwardM1	16	static
-../Core/Inc/roboclaw/roboclaw.c:312:19:roboclaw_BackwardM2	16	static
-../Core/Inc/roboclaw/roboclaw.c:316:19:roboclaw_ForwardBackwardM1	16	static
-../Core/Inc/roboclaw/roboclaw.c:320:19:roboclaw_ForwardBackwardM2	16	static
+../Core/Inc/roboclaw/roboclaw.c:300:19:roboclaw_ForwardM1	24	static
+../Core/Inc/roboclaw/roboclaw.c:304:19:roboclaw_ForwardM2	24	static
+../Core/Inc/roboclaw/roboclaw.c:308:19:roboclaw_BackwardM1	24	static
+../Core/Inc/roboclaw/roboclaw.c:312:19:roboclaw_BackwardM2	24	static
+../Core/Inc/roboclaw/roboclaw.c:316:19:roboclaw_ForwardBackwardM1	24	static
+../Core/Inc/roboclaw/roboclaw.c:320:19:roboclaw_ForwardBackwardM2	24	static

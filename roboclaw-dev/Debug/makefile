@@ -76,8 +76,8 @@ all: main-build
 main-build: roboclaw-dev.elf secondary-outputs
 
 # Tool invocations
-roboclaw-dev.elf roboclaw-dev.map: $(OBJS) $(USER_OBJS) C:\Users\george\Documents\cubeIDE-pref\roboclaw-dev\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "roboclaw-dev.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\george\Documents\cubeIDE-pref\roboclaw-dev\STM32F767ZITX_FLASH.ld" -Wl,-Map="roboclaw-dev.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+roboclaw-dev.elf roboclaw-dev.map: $(OBJS) $(USER_OBJS) C:\Users\george\Documents\repos\stm32-roboclaw\roboclaw-dev\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "roboclaw-dev.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\george\Documents\repos\stm32-roboclaw\roboclaw-dev\STM32F767ZITX_FLASH.ld" -Wl,-Map="roboclaw-dev.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

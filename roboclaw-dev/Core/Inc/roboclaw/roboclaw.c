@@ -31,7 +31,7 @@ static HAL_StatusTypeDef write(roboclaw_t* roboClawInst, uint8_t byte)
 
 static uint8_t read(roboclaw_t *roboClawInst)
 {
-    HAL_UART_Receive(roboClawInst->hserial, roboClawInst->rdata, 1, HAL_MAX_DELAY);
+    HAL_UART_Receive(roboClawInst->hserial, (uint8_t*) &roboClawInst->rdata, 1, HAL_MAX_DELAY);
     return roboClawInst->rdata;
 }
 
@@ -298,25 +298,25 @@ HAL_StatusTypeDef roboclaw_begin(roboclaw_t* roboClawInst, UART_HandleTypeDef* h
 }
 
 HAL_StatusTypeDef roboclaw_ForwardM1(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed) {
-    return write_n(3, address, M1FORWARD, speed);
+    return write_n(roboClawInst, 3, address, M1FORWARD, speed);
 }
 
 HAL_StatusTypeDef roboclaw_ForwardM2(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed) {
-	return write_n(3, address, M2FORWARD, speed);
+	return write_n(roboClawInst, 3, address, M2FORWARD, speed);
 }
 
 HAL_StatusTypeDef roboclaw_BackwardM1(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed) {
-	return write_n(3, address, M1BACKWARD, speed);
+	return write_n(roboClawInst, 3, address, M1BACKWARD, speed);
 }
 
 HAL_StatusTypeDef roboclaw_BackwardM2(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed) {
-	return write_n(3, address, M2BACKWARD, speed);
+	return write_n(roboClawInst, 3, address, M2BACKWARD, speed);
 }
 
 HAL_StatusTypeDef roboclaw_ForwardBackwardM1(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed){
-	return write_n(3,address,M17BIT,speed);
+	return write_n(roboClawInst, 3, address, M17BIT, speed);
 }
 
 HAL_StatusTypeDef roboclaw_ForwardBackwardM2(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed){
-	return write_n(3,address,M27BIT,speed);
+	return write_n(roboClawInst, 3, address, M27BIT, speed);
 }
