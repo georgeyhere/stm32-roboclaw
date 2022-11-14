@@ -124,7 +124,7 @@ typedef struct {
 
 HAL_StatusTypeDef roboclaw_begin(roboclaw_t* roboClawInst, UART_HandleTypeDef* huart, long speed);
 HAL_StatusTypeDef roboclaw_ForwardM1(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed);
-HAL_StatusTypeDef roboclaw_ForwardM2(roboclaw_t*, uint8_t address, uint8_t speed);
+HAL_StatusTypeDef roboclaw_ForwardM2(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed);
 HAL_StatusTypeDef roboclaw_BackwardM1(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed);
 HAL_StatusTypeDef roboclaw_BackwardM2(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed);
 HAL_StatusTypeDef roboclaw_ForwardBackwardM1(roboclaw_t* roboClawInst, uint8_t address, uint8_t speed);
