@@ -1,0 +1,9 @@
+{
+    "stm32-for-vscode.openOCDPath": false,
+    "stm32-for-vscode.armToolchainPath": false,
+    "files.associations": {
+        "*.xdc": "tcl",
+        "stm32f7xx_hal.h": "c",
+        "new": "c"
+    }
+}
